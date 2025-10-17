@@ -1,0 +1,29 @@
+// Initial App.js
+function greet(name) {
+    console.log("Hello " + name + "! Welcome!");
+}
+
+// App.js in feature1 (Alice adds time-based greeting)
+function greet(name) {
+    const hour = new Date().getHours();
+    if(hour < 12) {
+        console.log("Good Morning " + name + "!");
+    } else {
+        console.log("Hello " + name + "!");
+    }
+}
+
+// App.js in feature2 (Bob adds casual greeting)
+function greet(name) {
+    console.log("Hey " + name + "! How are you?");
+}
+
+// Resolved App.js after merging both changes
+function greet(name) {
+    const hour = new Date().getHours();
+    if(hour < 12) {
+        console.log("Good Morning " + name + "!");
+    } else {
+        console.log("Hey " + name + "! How are you?");
+    }
+}
